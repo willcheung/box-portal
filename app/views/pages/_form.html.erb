@@ -1,0 +1,36 @@
+<%= form_with model: @page do |form| %>
+  <div class="mb-4">
+    <%= form.label :title, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= form.text_field :title, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Title for this page" %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.label :description, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= form.text_area :body, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Short description for this page"  %>
+  </div>
+
+  <label class="block text-gray-700 text-sm font-bold mb-2" for="page_description">Box UI Element on this page</label>
+  <div class="inline-block relative w-64 mb-6">
+  <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+    <option>None</option>
+    <option>Content Explorer</option>
+    <option>Content Uploader</option>
+    <option>Content Preview</option>
+  </select>
+
+  <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="https://developer.box.com/guides/embed/ui-elements/">
+      See BUIE Documentation
+    </a>
+</div>
+
+  <div class="flex items-center justify-between">
+    <%= form.button class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+    <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+        Cancel
+      </a>
+  </div>
+
+<% end %>
+
+  <p class="text-gray-700 text-base mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">💻 Developers: Find this page in <code style="background:#ffeff0">app/pages/<%= @page.id %>.html</code>. Add custom code, integrations and extension in that file.</p>
+  </main>

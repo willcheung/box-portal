@@ -85,7 +85,7 @@ GEM
       hashie (>= 3.5, < 6)
       httpclient (~> 2.8)
       jwt (>= 1.4, < 3)
-    brakeman (6.2.1)
+    brakeman (6.2.2)
       racc
     builder (3.3.0)
     capybara (3.40.0)
